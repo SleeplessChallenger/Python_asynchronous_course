@@ -18,4 +18,4 @@ On the whole there were the following main chunks
   
   1. About how generators work/constructed in Python: [Link to Medium article](https://towardsdatascience.com/cpython-internals-how-do-generators-work-ba1c4405b4bc)
   2. A little bit nebulous, but cool comment (in reality, it is a whole article) on StackOverflow about under-the-hood of async/await: [Link to the comment](https://stackoverflow.com/a/51177895)
-
+  3. Another cool comment on StackOverflow: [Link to the comment](https://stackoverflow.com/a/51116910)
