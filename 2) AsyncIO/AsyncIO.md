@@ -12,7 +12,7 @@ Concurrency is wider than parallelism. Parallelism is a subclass of concurrency.
 
 <ins><i>Conceptually about Async:</ins></i> take multiple long operations, break them in places where operations wait for something and start another operation. (Image below)
 
-![Alt text](ImageRepo/AsyncIO_first.png?raw=true)
+![Alt text](/ImageRepo/AsyncIO_first.png?raw=true)
 
 <h2>Producer-Consumer pattern</h2>
 
@@ -40,7 +40,7 @@ So, **await** is a marker that will tell python to break up the whole code into 
 
 **Takeaway:** find method that supports async. I.e. when speaking to DB 
 
-![Alt text](ImageRepo/AsyncIO_second.png?raw=true)
+![Alt text](/ImageRepo/AsyncIO_second.png?raw=true)
 
 
 <h4>We can speed up ‘asyncio’ with ‘uvloop’:</h4>
@@ -64,7 +64,7 @@ Because when you make a web request, you’re waiting for the response from the 
 2. Second context manager is to make an asynchronous web request
 3. `.raise_for_status()` is to check that response code is not like 400ish etc
 
-![Alt text](ImageRepo/AsyncIO_three.png?raw=true)
+![Alt text](/ImageRepo/AsyncIO_three.png?raw=true)
 
 
 To use other libraries with asyncio they should support asynchronous methods. 
