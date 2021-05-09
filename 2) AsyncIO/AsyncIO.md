@@ -9,7 +9,7 @@ Concurrency is wider than parallelism. Parallelism is a subclass of concurrency.
 
 - Thread uses <ins>**preemptive multitasking:**</ins> the operating system actually knows about each thread and can interrupt it at any time to start running a different thread
 
-- Async uses cooperative multitasking: tasks must cooperate by announcing when they are ready to be switched out. That means that the code in the task has to change slightly to make this happen.
+- Async uses <ins>**cooperative multitasking:**</ins> tasks must cooperate by announcing when they are ready to be switched out. That means that the code in the task has to change slightly to make this happen.
 
 <ins><i>Conceptually about Async:</ins></i> take multiple long operations, break them in places where operations wait for something and start another operation. (Image below)
 
@@ -65,7 +65,7 @@ Because when you make a web request, you’re waiting for the response from the 
 2. Second context manager is to make an asynchronous web request
 3. `.raise_for_status()` is to check that response code is not like 400ish etc
 
-![Alt text](/ImageRepo/AsyncIO_three.png?raw=true)
+![Alt text](/ImageRepo/AsyncIO_third.png?raw=true)
 
 
 To use other libraries with asyncio they should support asynchronous methods. 
