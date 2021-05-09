@@ -6,6 +6,7 @@ Concurrency is wider than parallelism. Parallelism is a subclass of concurrency.
 [Article that describes parallelism and concurrency](https://luminousmen.com/post/concurrency-and-parallelism-are-different)
 
 <h3>Salient note:</h3>
+
 - Thread uses <ins>**preemptive multitasking:**</ins> the operating system actually knows about each thread and can interrupt it at any time to start running a different thread
 
 - Async uses cooperative multitasking: tasks must cooperate by announcing when they are ready to be switched out. That means that the code in the task has to change slightly to make this happen.
