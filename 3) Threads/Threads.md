@@ -13,7 +13,7 @@ AsyncIO **is cleaner and easier** than Threads. But asyncIO can be used if only 
 
 Look at `hello_threads.py`. If program at below state, then after it has printed ‘Done’, the greeter thread continues its operation
 
-`
+```bash
 def main():
 	t = threading.Thread(target=greeter, args=('Michael', 5), daemon=True)
 	t.start()
@@ -23,14 +23,14 @@ def greeter(name: str, times: int):
 	for n in range(0, times):
 		print(f'Hello, there {n} {name}')
 		time.sleep(1)
-`
+```
 
 By default threads are known as **foreground threads (non-Daemon)**. If there is main thread and another one which was kicked off by first one, if first thread ends, then second will continue its execution:
 
 <ins>‘Daemon’ and ‘non-Daemon’ threads</ins>
 
 **First one** gets killed when the main program terminates. So, it’s a thread which we don’t need to care about in regard to shutting down it. **(daemon=True) WITHOT JOIN()**
-`
+```bash
 def main():
 	t = threading.Thread(target=greeter, args=('Michael', 5))
 	t.start()
@@ -41,7 +41,7 @@ def greeter(name: str, times: int):
 	for n in range(0, times):
 		print(f'Hello, there {n} {name}')
 		time.sleep(1)
-`
+```
 
 **Second one** is a thread which will make main program wait till it’s done and only then allow main program to terminate itself **WITHOUT JOIN()**
 
@@ -65,7 +65,7 @@ We call `.is_alive()` on thread which we `.join()` with timeout. If thread is st
 
 [Helpful link about threading](https://www.bogotobogo.com/python/Multithread/python_multithreading_Daemon_join_method_threads.php)
 
-`
+```bash
 def n():
     logging.debug('Starting')
     logging.debug('Exiting')
@@ -87,7 +87,7 @@ if __name__ == '__main__':
     d.join(3.0)
     print 'd.isAlive()', d.isAlive()
     t.join()
-`
+```
 
 There are issue with terminating threads from, for example, terminal window.
 
