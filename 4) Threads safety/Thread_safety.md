@@ -15,7 +15,7 @@ Let’s analyze a bunch of images.
 
 `=>` task of thread safety is to disallow such condition. It can be implemented in a coarse-grained way when anything isn’t accepted for another thread to do or fine-grained when only parts are not allow (like don’t touch that red figure only)
 
-![Alt text](/ImageRepo/Thread_safety_first.png?raw=true)
+![Alt text](/ImageRepo/Threads_safety_first.png?raw=true)
 
 ![Alt text](/ImageRepo/Threads_safety_second.png?raw=true)
 
