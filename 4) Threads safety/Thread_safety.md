@@ -24,7 +24,7 @@ Let’s analyze a bunch of images.
 
 Next, let’s look at `unsafe_bank.py` The main issue is that a) multiple threads may use accounts that are in process now b) in the end there is ‘Everything is okay’ default statement returned which  is incorrect<br>
 So, how to tweak the class?<br>
-Use either `Lock or RLock`. Problem with former is that if you call Lock from a function and it through series of function calls ends up calling into that Lock again -> Deadlock. RLock means that thread itself can enter the lock many times as long as it exists as many times, but no other thread can enters 
+Use either `Lock or RLock`. Problem with former is that if you call Lock from a function and it through series of function calls ends up calling into that Lock again -> Deadlock. RLock means that thread itself can enter the lock many times as long as it exists as many times, but no other thread can enter
 
 #####
 **From RealPython:**<br>
