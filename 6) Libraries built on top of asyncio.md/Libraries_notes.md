@@ -35,7 +35,7 @@ So, one function does **computing** and another function **doesn’t have asynci
 Secondly, let’s analyze third file with **unsync** (`with_unsync.py`)
 
 1. Remove `.get_event_loop()` as there will be one <ins><i>ambient hidden asyncio event loop</i></ins>
-2. Remove `create_task()` and leave plan functions
+2. Remove `create_task()` and leave plain functions
 3. As we want to wait till every task is done -> replace `.run_until_complete()` with `t.result() for t in tasks`. It’s a blocking call until its done, so that line will make everything wait
 4. `@unsync()` decorator will create an ambient loop around the **async func**
 5. **BUT:** if we have function <ins><i>async possible operations</i></ins> (no libraries, for example) then we can <ins><i>remove async before def</i></ins> which will make this function run on thread. Ex: `download_some_more()`
