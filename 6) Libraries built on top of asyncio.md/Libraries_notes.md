@@ -20,7 +20,7 @@ Coroutines can await on **Future** objects until they either have a result or an
 
 Let’s look at first two files: `noSync.py`  & `asyncOnly.py`
 
-First file is just ordinary one, but of we look at the second, then things can become more interesting. 
+First file is just ordinary one, but if we look at the second, then things can become more interesting. 
 
 Although all files have async before them, 2/4 have real benefit from it, others don’t
 
