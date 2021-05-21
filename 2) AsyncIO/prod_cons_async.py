@@ -15,7 +15,7 @@ def main():
 	task1 = loop.create_task(generate_data(20, data))
 	task2 = loop.create_task(generate_data(20, data))
 	task3 = loop.create_task(process_data(40, data))
-	final_task = asyncio.gather(task1, task2)
+	final_task = asyncio.gather(task1, task2, task3)
 
 	loop.run_until_complete(final_task)
 
